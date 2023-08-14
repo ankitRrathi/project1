@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+var emailtext =TextEditingController();
+   var passtext =TextEditingController();
 
 
 
 class Homepage extends StatelessWidget {
    const Homepage({super.key});
+   
  
 
 
@@ -14,15 +17,15 @@ class Homepage extends StatelessWidget {
 
 
 
-
     return Scaffold(
       appBar:  AppBar(
         title: const   Text("ANKIT"),
-        backgroundColor: const Color.fromARGB(255, 5, 130, 111),
-        foregroundColor: const Color.fromARGB(255, 223, 94, 8),
+        backgroundColor: const Color.fromARGB(217, 200, 10, 55),
+        foregroundColor: const  Color.fromARGB(183, 223, 8, 177),
       ),
-      
-      
+       body: const TextField(
+
+       ),
     );
   }
 }                                                               
