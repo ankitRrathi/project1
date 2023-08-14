@@ -18,11 +18,11 @@ class Homepage extends StatelessWidget {
     return Scaffold(
       appBar:  AppBar(
         title: const   Text("ANKIT"),
-        backgroundColor: const Color.fromARGB(255, 132, 95, 14),
-        foregroundColor: const Color.fromARGB(255, 65, 14, 96),
+        backgroundColor: const Color.fromARGB(255, 5, 130, 111),
+        foregroundColor: const Color.fromARGB(255, 223, 94, 8),
       ),
       
-  
+      
     );
   }
 }                                                               
