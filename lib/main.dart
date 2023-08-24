@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:project1/pages/homepage.dart';
-import 'package:project1/spash_screen.dart';
-import 'package:project1/widgets/rounded_btn.dart';
+//import 'package:project1/spash_screen.dart';
+//import 'package:project1/widgets/rounded_btn.dart';
 
 void main()
 {
@@ -25,7 +25,7 @@ class _MyAppState extends State<MyApp> {
 
     
   return Scaffold(
-    body: SplashSC(),
+    body: Homepage(),
 
   );
   }

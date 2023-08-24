@@ -1,33 +1,43 @@
-import 'package:flutter/material.dart';
-import 'package:project1/pages/homepage.dart';
-class  RoundButton extends StatelessWidget {
-  const RoundButton({super.key});
+// import 'package:flutter/material.dart';
+// import 'package:project1/pages/homepage.dart';
+// class  RoundButton extends StatefulWidget {
+//   const RoundButton({super.key});
 
+//   @override
+//   State<RoundButton> createState() => _RoundButtonState();
+// }
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Click Here for Welcome Page !',style: TextStyle(fontSize: 31,fontFamily: 'ankit'),),
-            ElevatedButton(onPressed: (){
+// class _RoundButtonState extends State<RoundButton> {
+//   @override
+//   Widget build(BuildContext context) {
+//     var nameController =TextEditingController();
+    
+//     return Scaffold(
+//       body: Center(
+//         child: Column(
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           children: [
+//             SizedBox(
+//               width: 300,
+//               child: TextField(
+//                 controller: nameController,
+//               )),
+//             ElevatedButton(onPressed: (){
       
-              Navigator.push(context, MaterialPageRoute(builder: (context) => Homepage(),));
+//               Navigator.push(context, MaterialPageRoute(builder: (context) => Homepage(nameController.text.toString())));
               
       
-            }, child: Text('Login'))
+//             }, child:const  Text('Login'))
       
       
-          ],
-        ),
-      ),
+//           ],
+//         ),
+//       ),
 
 
-    );
+//     );
    
     
       
-  }
-}
+//   }
+// }
