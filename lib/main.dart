@@ -1,8 +1,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:project1/pages/homepage.dart';
-//import 'package:project1/spash_screen.dart';
-//import 'package:project1/widgets/rounded_btn.dart';
+// import 'package:project1/widgets/rounded_btn.dart';
+// import 'package:project1/spash_screen.dart';
+// // import 'package:project1/spash_screen.dart';
+// import 'package:project1/widgets/rounded_btn.dart';
 
 void main()
 {
@@ -12,19 +14,14 @@ void main()
   );
 
 }
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
 
     
-  return Scaffold(
+  return const Scaffold(
     body: Homepage(),
 
   );
