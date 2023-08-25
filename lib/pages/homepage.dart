@@ -8,55 +8,54 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-  double width1 = 200.0;
-  double height1 = 100.0;
-  var bgcolor =Colors.pink;
-  bool flag = true;
+ var iopacity = 1.0;
+ bool istrue =true;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("ANIMATED CONTAINER"),
+        title: const Text("ANIMATED OpACITY"),
         backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+      body:Center(
+        child: Column(  mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TweenAnimationBuilder<double>(
+            AnimatedOpacity(
+              opacity :  iopacity, 
               duration: Duration(seconds: 2),
-              tween: Tween<double>(begin: width1, end: width1),
-              builder: (_, value, child) {
-                return Container(
-                  width: value,
-                  height: height1,
-                  color: Colors.green,
-                );
-              },
-            ),
-            ElevatedButton(
-              onPressed: () {
-                setState(() {
-                  if (flag) {
-                    width1 = 100.0;
-                    height1 = 200.0;
-                    bgcolor= Colors.red;
-                    flag = false;
-                  } else {
-                    width1 = 200.0;
-                    height1 = 100.0;
-                    bgcolor = Colors.grey;
-                    flag = true;
+              curve: Curves.easeOutQuad,
+              child: Container(
+                width: 300, 
+                height: 100,
+                color: Colors.amber,
+              ),
+      
+              ),
+              ElevatedButton(onPressed: (){
+                setState(() { 
+                  if(istrue)
+                  {
+                    iopacity = 0.0;
+                    istrue = false;
                   }
+                  else 
+                  {
+                    iopacity =1.0;
+                    istrue =true;
+
+                  }
+                  
+
                 });
-              },
-              child: Text('Change'),
-            )
+
+              }, child: Text('Animation'))
           ],
         ),
-      ),
+      )
+
+ 
     );
   }
 }
