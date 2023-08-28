@@ -2,27 +2,24 @@
 
 // import 'package:flutter/material.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+// import 'package:project1/pages/homepage.dart';
 // import 'package:project1/widgets/rounded_btn.dart';
+// import 'package:shared_preferences/shared_preferences.dart';
 
 // class SplashSC extends StatefulWidget {
 //   const SplashSC({super.key});
 
 //   @override
-//   State<SplashSC> createState() => _SplashSCState();
+//   State<SplashSC> createState() => SplashSCState();
 // }
 
-// class _SplashSCState extends State<SplashSC> {
+// class SplashSCState extends State<SplashSC> {
+//   static const String KEYLOGIN ="login";
 //   @override
 //   void initState() {
     
 //     super.initState();
-//      Timer  (Duration(seconds: 3), () 
-//     {Navigator.pushReplacement(
-//       context, 
-//       MaterialPageRoute(
-//         builder:(context) =>const RoundButton(),
-//     ));
-//   });
+//    wheretogo();
 //   }
 //   @override
 //   Widget build(BuildContext context) {
@@ -36,6 +33,29 @@
 //         ),
 //       ),
 //     );
+//   }
+//   void wheretogo()async {
+//     var sharedpref =await SharedPreferences.getInstance();
+//      var islogin = sharedpref.getBool(KEYLOGIN);
+//        Timer  ( const Duration(seconds: 3), () 
+//     {if(islogin!=null){
+//       if(islogin){
+//         Navigator.pushReplacement(context, MaterialPageRoute(builder:(context) => Homepage()));
+//       }
+//       else
+//       {Navigator.pushReplacement(context, MaterialPageRoute(builder:(context) => RoundButton(),));
+
+//       }
+
+//     }
+//     else{
+//       Navigator.pushReplacement(context, MaterialPageRoute(builder:(context) => RoundButton()));
+//     }
+    
+    
+//   }
+//   );
+
 //   }
 // }
 

@@ -1,11 +1,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:project1/pages/homepage.dart';
-// import 'package:project1/widgets/rounded_btn.dart';
-// import 'package:project1/spash_screen.dart';
-// // import 'package:project1/spash_screen.dart';
-// import 'package:project1/widgets/rounded_btn.dart';
-
 void main()
 {
   runApp( const  MaterialApp(
@@ -21,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     
-  return const Scaffold(
+  return  Scaffold(
     body: Homepage(),
 
   );

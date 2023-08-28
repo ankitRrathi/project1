@@ -1,51 +1,76 @@
 import 'package:flutter/material.dart';
-
-class Homepage extends StatefulWidget {
+class Homepage extends StatelessWidget {
   const Homepage({Key? key}) : super(key: key);
-
-  @override
-  State<Homepage> createState() => _HomepageState();
-}
-
-class _HomepageState extends State<Homepage> with SingleTickerProviderStateMixin {
- late Animation<double> animation;
- late AnimationController animationController;
- late Animation coloranimation;
- @override
-  void initState() {
-
-    
-    super.initState();
-     animationController =  AnimationController(vsync: this,duration:const Duration(seconds: 3));
-    animation = Tween<double>(begin: 0.0, end: 200.0).animate(animationController);
-    coloranimation= ColorTween(begin: Colors.amber,end : Colors.purple).animate(animationController);
-
-   
-    animationController.addListener(() {setState(() {
-      
-    });
-    });
-    animationController.forward();
-  }
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("ANIMATED OpACITY"),
-        backgroundColor: Colors.blue,
-        foregroundColor: Colors.white,
-      ),
-      body : Center(
-        child: Container(
-          width: animation.value, 
-          height:  animation.value, 
-          color: coloranimation.value,
+        title:const  Text('Shared Prefs'),
+        shadowColor: Colors.black87,
+        centerTitle: true
+    
 
-        ),
       ),
-     
+      body : ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          Container(
+            width : 200, 
+            height: 200,
+            color: Colors.amber,
+         ),
+           Container(
+            width : 200, 
+            height: 200,
+            color: Colors.green,
+         ),  Container(
+            width : 200, 
+            height: 200,
+            color: Colors.black,
+         ),  Container(
+            width : 200, 
+            height: 200,
+            color: Colors.black,
+         ),  Container(
+            width : 200, 
+            height: 200,
+            color: Colors.red,
+         ),  Container(
+            width : 200, 
+            height: 200,
+            color: Colors.purple,
+         ),  Container(
+            width : 200, 
+            height: 200,
+            color: Colors.grey,
+         ),  Container(
+            width : 200, 
+            height: 200,
+            color: Colors.pink,
+         ),  Container(
+            width : 200, 
+            height: 200,
+            color: Colors.blue,
+         ),  Container(
+            width : 200, 
+            height: 200,
+            color: Colors.green,
+         ),  Container(
+            width : 200, 
+            height: 200,
+            color: Colors.red,
+         ),  Container(
+            width : 200, 
+            height: 200,
+            color: Colors.black,
+         ),
+        ],
+      )
+      
+    
     );
+ 
+  
   }
 }
+
