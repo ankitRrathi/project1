@@ -10,24 +10,20 @@ import 'package:flutter/material.dart';
 }
 
 class _HomepageState extends State<Homepage>with TickerProviderStateMixin {
-  late final AnimationController _controller = AnimationController(vsync: this,duration: Duration(seconds: 3));
-  late final Animation<double> _animation = CurvedAnimation(parent: _animation, curve: Curves.elasticOut);
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  
+  late final AnimationController _animationController =AnimationController(vsync: this,duration: Duration(seconds: 3));
+  late final Animation<double> animation =CurvedAnimation(parent: animation, curve: Curves.elasticOut);
+ 
   @override
    Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: RotationTransition(turns: _animation,
+   return Scaffold(
+    body: Center(
+      child: RotationTransition(
+        turns: animation,
         child: Padding(padding: EdgeInsets.all(8.0),
-        child: FlutterLogo(),),),
-      ),
-    );
+        child: FlutterLogo(),
+        ),),
+    ),
+   );
     
    }
      }
