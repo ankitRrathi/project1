@@ -1,76 +1,33 @@
-import 'package:flutter/material.dart';
-class Homepage extends StatelessWidget {
-  const Homepage({Key? key}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title:const  Text('Shared Prefs'),
-        shadowColor: Colors.black87,
-        centerTitle: true
-    
 
-      ),
-      body : ListView(
-        scrollDirection: Axis.horizontal,
-        children: [
-          Container(
-            width : 200, 
-            height: 200,
-            color: Colors.amber,
-         ),
-           Container(
-            width : 200, 
-            height: 200,
-            color: Colors.green,
-         ),  Container(
-            width : 200, 
-            height: 200,
-            color: Colors.black,
-         ),  Container(
-            width : 200, 
-            height: 200,
-            color: Colors.black,
-         ),  Container(
-            width : 200, 
-            height: 200,
-            color: Colors.red,
-         ),  Container(
-            width : 200, 
-            height: 200,
-            color: Colors.purple,
-         ),  Container(
-            width : 200, 
-            height: 200,
-            color: Colors.grey,
-         ),  Container(
-            width : 200, 
-            height: 200,
-            color: Colors.pink,
-         ),  Container(
-            width : 200, 
-            height: 200,
-            color: Colors.blue,
-         ),  Container(
-            width : 200, 
-            height: 200,
-            color: Colors.green,
-         ),  Container(
-            width : 200, 
-            height: 200,
-            color: Colors.red,
-         ),  Container(
-            width : 200, 
-            height: 200,
-            color: Colors.black,
-         ),
-        ],
-      )
-      
-    
-    );
- 
-  
-  }
+
+import 'package:flutter/material.dart';
+//import 'package:project1/widgets/rounded_btn.dart';
+ class Homepage extends StatefulWidget {
+   const Homepage({super.key});
+
+  @override
+  State<Homepage> createState() => _HomepageState();
 }
 
+class _HomepageState extends State<Homepage>with TickerProviderStateMixin {
+  late final AnimationController _controller = AnimationController(vsync: this,duration: Duration(seconds: 3));
+  late final Animation<double> _animation = CurvedAnimation(parent: _animation, curve: Curves.elasticOut);
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  
+  @override
+   Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: RotationTransition(turns: _animation,
+        child: Padding(padding: EdgeInsets.all(8.0),
+        child: FlutterLogo(),),),
+      ),
+    );
+    
+   }
+     }
