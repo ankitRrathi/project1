@@ -1,4 +1,6 @@
 
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:project1/pages/homepage.dart';
 import 'package:project1/widgets/rounded_btn.dart';
@@ -21,8 +23,13 @@ class MyApp extends StatelessWidget {
   
 
     
-  return const  Scaffold(
-    body: Homepage(),
+  return  Scaffold(
+    appBar: AppBar(
+      title:const  Text('Animated Opacity'),
+      centerTitle: true,
+
+    ),
+    body:const  Homepage(),
   );
   }
 }
