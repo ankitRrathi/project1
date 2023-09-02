@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
     
   return  Scaffold(
     appBar: AppBar(
-      title:const  Text('Animated Opacity'),
+      title:const  Text('AutoComplete '),
       centerTitle: true,
 
     ),
