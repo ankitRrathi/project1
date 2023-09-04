@@ -23,13 +23,9 @@ class MyApp extends StatelessWidget {
   
 
     
-  return  Scaffold(
-    appBar: AppBar(
-      title:const  Text('AutoComplete '),
-      centerTitle: true,
-
-    ),
-    body:const  Homepage(),
+  return const Scaffold(
+   
+    body:  Homepage(),
   );
   }
 }
