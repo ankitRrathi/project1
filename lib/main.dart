@@ -1,8 +1,18 @@
+
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:project1/pages/homepage.dart';
+import 'package:project1/widgets/rounded_btn.dart';
+
+
+
 void main()
 {
-  runApp( const MyApp());
+  runApp( const  MaterialApp(
+    home: MyApp(),
+  )
+  );
 
 }
 class MyApp extends StatelessWidget {
@@ -10,18 +20,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
-    return   MaterialApp(
-      home:const Homepage(),
-      themeMode : ThemeMode.light,
-      theme: ThemeData(primarySwatch: Colors.red),
   
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-      ),
-    
 
- 
-      );
+    
+  return const Scaffold(
+   
+    body:  Homepage(),
+  );
   }
 }
