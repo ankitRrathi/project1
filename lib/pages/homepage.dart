@@ -1,108 +1,87 @@
 
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
-//import 'package:project1/widgets/rounded_btn.dart';
- class Homepage extends StatefulWidget {
-   const Homepage({Key? key}) : super(key: key);
+import 'package:project1/widgets/rounded_btn.dart';
+
+
+
+class Homepage extends StatefulWidget {
+  const Homepage({
+    Key? key,
+ 
+  }) : super(key: key);
+      
 
   @override
   State<Homepage> createState() => _HomepageState();
 }
 
-class _HomepageState extends State<Homepage> with SingleTickerProviderStateMixin{
-  
+class _HomepageState extends State<Homepage>{
+  bool change =false;
+ 
+ 
   @override
-   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-             Spacer(),
-            SingleChoice(),
-             SizedBox(height: 20), 
-            MultipleChoice(),
-             Spacer(),
-          ],
-        ),
+  Widget build(BuildContext context) {
+    
+    return Material(
+      child: Column(
+        children: [
+          Padding(padding: EdgeInsets.all(10)),
+          Container(height: 200,
+          color: Colors.white,
+            child: Image.asset('assets/images/abc.png',fit: BoxFit.cover,)),
+          Text('Welcome',style: TextStyle(fontSize: 30,fontFamily: 'ankit'),),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: Column(
+              children: [
+                TextFormField( decoration: InputDecoration(hintText: 'Enter Username',
+                  label: Text('Username')
+                ),
+                ),
+                SizedBox(height: 10,),
+                TextFormField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    hintText: 'Enter Password',
+                    
+                    label: Text('Password')
+                  ),
+                ),
+                Padding(padding: EdgeInsets.symmetric(vertical: 5)),
+              ],
+            ),
+          ),
+          SizedBox(height: 10,),
+          InkWell(
+            onTap: ()
+            {
+              setState(() {
+                change =false;
+
+              });
+              // Navigator.push(context, MaterialPageRoute(builder: (context)=>RoundButton()));
+            },
+            child: AnimatedContainer(
+              duration: Duration(seconds: 1),
+              width: change? 50 : 150, 
+              height: 50, alignment: Alignment.center,
+              child: Text('Login',style: TextStyle(fontSize: 15,fontFamily: 'ankit',color: Colors.white),),
+              decoration: BoxDecoration(
+                color: Colors.deepPurple,
+                borderRadius: BorderRadius.circular(change ? 15 : 20)
+              ),
+            ),
+          )
+          // ElevatedButton(onPressed: (){
+          //   Navigator.push(context, MaterialPageRoute(builder:(context) => RoundButton() ));
+          // }, child: Text('Login'))
+        ],
       ),
+    
 
     );
-    
-  }
-}
-  enum Calendar {day,week,month,year}
-
-class SingleChoice extends StatefulWidget {
-  const SingleChoice({super.key});
-
-  @override
-  State<SingleChoice> createState() => _SingleChoiceState();
-}
-
-class _SingleChoiceState extends State<SingleChoice> {
-  Calendar calendarView =Calendar.day;
-  @override
-  Widget build(BuildContext context) {
-    return SegmentedButton(
-      segments: const <ButtonSegment<Calendar>>
-      [
-        ButtonSegment<Calendar>(
-          value: Calendar.day,
-          label: Text('Day'),
-          icon: Icon(Icons.calendar_view_day_rounded)),
-          ButtonSegment(value: Calendar.week,
-          label: Text('Week'),
-          icon: Icon(Icons.calendar_view_week_rounded)
-          ),
-          ButtonSegment(value: Calendar.month,
-          label: Text('Month'),
-          icon: Icon(Icons.calendar_view_month_rounded)
-          ),
-          ButtonSegment(value: Calendar.year,
-          label: Text('Year'),
-          icon:Icon(Icons.calendar_view_day_rounded)
-          )
-      ], 
-      selected:<Calendar>{calendarView},
-      onSelectionChanged: (Set newSelection)
-      {
-        setState((){
-          calendarView= newSelection.first;
-        });
-      }
-      );
-  }
-}
-enum Sizes {extraSmall,small,medium,large,extraLarge}
-class MultipleChoice extends StatefulWidget {
-  const MultipleChoice({super.key});
-
-  @override
-  State<MultipleChoice> createState() => _MultipleChoiceState();
-}
-
-class _MultipleChoiceState extends State<MultipleChoice> {
-  Set selection ={Sizes.large,Sizes.extraLarge};
-  @override
-  Widget build(BuildContext context) {
-    return SegmentedButton(
-      segments: const <ButtonSegment<Sizes>>
-      [
-        ButtonSegment(value: Sizes.extraSmall, label: Text('xS')),
-        ButtonSegment(value :Sizes.small,label: Text('S')),
-        ButtonSegment(value:Sizes.medium,label : Text('M')),
-        ButtonSegment(value: Sizes.large,label : Text('L')),
-        ButtonSegment(value: Sizes.extraSmall,label:Text('XL'))
-      ], 
-      selected: selection,
-      onSelectionChanged: ( Set newSelection ){
-        setState(() {
-          selection =newSelection;
-        }
-        );
-       
-      },
-      multiSelectionEnabled: true,
-      );
-  }
-}
+ }
+ }
+ 
