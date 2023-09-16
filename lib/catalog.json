@@ -1,0 +1,92 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Iphon1 15",
+            "desc": "Iphone 15 is available here for sale",
+            "price": "999",
+            "color": "#142e57",
+            "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-15-finish-select-202309-6-7inch-blue?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1692923784161"
+        },
+        {
+            "id": 2,
+            "name": "Apple MacBook",
+            "desc": "Apple MacBook is available here on Sale",
+            "price": "1049",
+            "color": "#afde49",
+            "image": "https://www.apple.com/newsroom/images/product/mac/standard/Apple_MacBook-Pro_14-16-inch_10182021_big.jpg.large_2x.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Samsung S22 Ultra",
+            "desc": "Samsung S22 ultra is available here on Sale",
+            "price": "999",
+            "color": "#2293e3",
+            "image": "https://www.dpreview.com/files/p/articles/4617565053/samsung-galaxy-s22-ultra.jpeg"
+        },
+        {
+            "id": 4,
+            "name": "Pocco X3 Pro",
+            "desc": "Pocco X3 Pro is available here on Sale !",
+            "price": "499",
+            "color": "#c3e322",
+            "image": "https://s3bo.cashify.in/gpro/uploads/2021/03/30092050/poco-x3-pro-front-2.png?p=gp4sq&s=gp"
+        },
+        {
+            "id": 5,
+            "name": "Samsung Galaxy Fold 2",
+            "desc": "Samsung Galaxy Fold 2 is available here on Sale",
+            "price": "999",
+            "color": "#e38222",
+            "image": "https://img.global.news.samsung.com/global/wp-content/uploads/2021/08/galaxy_zfold3_zflip35g_main_kv.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Ipad 14",
+            "desc": "Ipad new generation is available here on sale",
+            "price": "1099",
+            "color": "#e38222",
+            "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/ipad-finish-select-gallery-202211-space-gray-wifi?wid=5120&hei=2880&fmt=p-jpg&qlt=95&.v=1670631471539"
+        },
+        {
+            "id": 7,
+            "name": "iphone 13 pro",
+            "desc": "Iphone 13 Pro is available here on Sale",
+            "price": "999",
+            "color": "#e322cc",
+            "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-13-pro-max-graphite-2023?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1679072989055"
+        },
+        {
+            "id": 8,
+            "name": "Iphone 12 pro",
+            "desc": "Iphone 12 pro is available here on sale",
+            "price": "799",
+            "color": "#8425ba",
+            "image": "https://www.apple.com/newsroom/images/product/iphone/standard/Apple_announce-iphone12pro_10132020.jpg.og.jpg?202308170246"
+        },
+        {
+            "id": 9,
+            "name": "Apple Macbook 12",
+            "desc": "Latest Apple macbook available here on Sale",
+            "price": "2099",
+            "color": "#25bab0",
+            "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mba15-midnight-select-202306?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1684518479433"
+        },
+        {
+            "id": 10,
+            "name": "Lg Tv",
+            "desc": "Lg Tv on affordable price is available here",
+            "price": "499",
+            "color": "#253cba",
+            "image": "https://cdn1.smartprix.com/rx-izM30W6Uk-w420-h420/lg-lq64-32-inch-hd-r.webp"
+        },
+        {
+            "id": 11,
+            "name": "Pixle 5a",
+            "desc": "Google Pixel 5a is availale here on Sale",
+            "price": "599",
+            "color": "#2592ba",
+            "image": "https://m.media-amazon.com/images/I/51cPFTAo1lL._SL1000_.jpg"
+        }
+    ]
+}
