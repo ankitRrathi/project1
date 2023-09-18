@@ -1,0 +1,93 @@
+{
+    "products" :[
+        {
+            "id" : 1,
+            "name" : "Iphone15 Pro",
+            "price": "price",
+            "desc" : "Experience the iPhone 15 – your dynamic companion. Dynamic Island ensures you stay connected, bubbling up alerts seamlessly while you're busy. Its durable design features infused glass and aerospace-grade aluminum, making it dependable and resistant to water and dust. Capture life with precision using the 48 MP Main Camera, perfect for any shot. Powered by the A16 Bionic Processor, it excels in computational photography and more, all while conserving battery life. Plus, it's USB-C compatible, simplifying your charging needs. Elevate your tech game with the iPhone 15 – innovation at your fingertips. Goodbye cable clutter, hello convenience.",
+            "images" : "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-15-finish-select-202309-6-7inch-blue?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1692923784161"
+            
+        },
+        {
+            "id": 2,
+            "name": "Apple MacBook",
+            "desc": "This Apple Macbook is powered by the Apple M1 chip and is easily portable so that you can carry it with you anywhere you want. This thin and light notebook is equipped with an 8-core CPU to handle all your tasks more efficiently. The 8-core GPU of this notebook takes graphic-intensive games and apps to a whole new level. It also comes with a 16-core Neural Engine to do machine learning tasks more effectively. Its fan-less design offers silent operations and has a long-lasting battery life which can last up to 18 hours on a single charge. ",
+            "price": "1049",
+            "color": "#afde49",
+            "image": "https://www.apple.com/newsroom/images/product/mac/standard/Apple_MacBook-Pro_14-16-inch_10182021_big.jpg.large_2x.jpg"
+            
+        },
+        {
+            "id": 3,
+            "name": "Samsung S22 Ultra",
+            "desc": "The first Galaxy S with embedded S Pen. Write comfortably like pen on paper, turn quick notes into legible text and use Air Actions to control your phone remotely. Improved latency in Samsung Notes makes every pen stroke feel as natural as ink on paper - and you can convert those hastily written ideas into legible text.5G Ready powered by Galaxy�s first 4nm processor. Our fastest, most powerful chip ever. That means, a faster CPU and GPU compared to Galaxy S21 Ultra. It�s an epic leap for smartphone technology. The Dynamic AMOLED 2x display improves outdoor visibility with up to 1750 Nits in peak brightness. And the 120Hz adaptive refresh rate keeps the scroll smooth, adjusting to what's on screen for an optimized view. Our most advanced Pro-grade Camera yet, packing the power of a professional's kit in one handheld device. Also lets you make your nights epic with Nightography: The sensor pulls in more light, the Super Clear Lens tones down lens flare, and fast-acting AI delivers near-instant intelligent processing.",
+            "price": "999",
+            "color": "#2293e3",
+            "image": "https://www.dpreview.com/files/p/articles/4617565053/samsung-galaxy-s22-ultra.jpeg"
+        },
+        {
+            "id": 4,
+            "name": "Pocco X3 Pro",
+            "desc": "For fast computing on the move, impressive photos, and all-day-long, uninterrupted performance, the POCO X3 Pro is the right device for you. This smartphone features the Qualcomm Snapdragon 860 for smooth function, 16.94-cm (6.67) FHD+ Display for clear visuals, and a 5160 mAh Battery to ensure that your smartphone does not run out of battery quickly. ",
+            "price": "499",
+            "color": "#c3e322",
+            "image": "https://s3bo.cashify.in/gpro/uploads/2021/03/30092050/poco-x3-pro-front-2.png?p=gp4sq&s=gp"
+        },
+        {
+            "id": 5,
+            "name": "Samsung Galaxy Fold 2",
+            "desc": "Enjoy seamless connectivity and uninterrupted streaming on this foldable, light and compact Samsung Galaxy Z Fold5 smartphone. Turn your phone into a mobile studio with the 30x Space and show your subjects what they see with the Dual Preview Mode. With a massive screen display of 19 cm, this phone offers a cinematic experience. You can do hassle free multitasking as the phone allows you to keep three windows at once and the taskbar can hold up to twelve apps for a smooth navigation. Elevate your performance with the Snapdragon 8 Gen 2 processor available in this smartphone. This phone is built with a top of the line water resistant material. Powered by a 4400 mAh dual battery, this phone supports endless music for up to 73 hours straight. Control many screens at once with the Multi Control feature. ",
+            "price": "999",
+            "color": "#e38222",
+            "image": "https://img.global.news.samsung.com/global/wp-content/uploads/2021/08/galaxy_zfold3_zflip35g_main_kv.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Ipad 14",
+            "desc": "This i pad has all new designs of I pad Air 4,5",
+            "price": "1099",
+            "color": "#e38222",
+            "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/ipad-finish-select-gallery-202211-space-gray-wifi?wid=5120&hei=2880&fmt=p-jpg&qlt=95&.v=1670631471539"
+        },
+        {
+            "id": 7,
+            "name": "iphone 13 pro",
+            "desc": "iPhone 13. boasts an advanced dual-camera system that allows you to click mesmerising pictures with immaculate clarity. Furthermore, the lightning-fast A15 Bionic chip allows for seamless multitasking, elevating your performance to a new dimension. A big leap in battery life, a durable design, and a bright Super Retina XDR display facilitate boosting your user experience.",
+            "price": "999",
+            "color": "#e322cc",
+            "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-13-pro-max-graphite-2023?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1679072989055"
+        },
+        {
+            "id": 8,
+            "name": "Iphone 12 pro",
+            "desc": "Iphone 12 pro is available here on sale",
+            "price": "799",
+            "color": "#8425ba",
+            "image": "https://www.apple.com/newsroom/images/product/iphone/standard/Apple_announce-iphone12pro_10132020.jpg.og.jpg?202308170246"
+        },
+        {
+            "id": 9,
+            "name": "Apple Macbook 12",
+            "desc": "Latest Apple macbook available here on Sale",
+            "price": "2099",
+            "color": "#25bab0",
+            "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mba15-midnight-select-202306?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1684518479433"
+        },
+        {
+            "id": 10,
+            "name": "Lg Tv",
+            "desc": "Lg Tv on affordable price is available here",
+            "price": "499",
+            "color": "#253cba",
+            "image": "https://cdn1.smartprix.com/rx-izM30W6Uk-w420-h420/lg-lq64-32-inch-hd-r.webp"
+        },
+        {
+            "id": 11,
+            "name": "Pixle 5a",
+            "desc": "Google Pixel 5a is availale here on Sale",
+            "price": "599",
+            "color": "#2592ba",
+            "image": "https://m.media-amazon.com/images/I/51cPFTAo1lL._SL1000_.jpg"
+        }
+    ]
+}
