@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:project1/models/catalog.dart';
 import 'package:project1/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:project1/widgets/HomeWidget/add_to_cart.dart';
 
 class HomeDetailsPage extends StatelessWidget {
   const HomeDetailsPage({super.key,required this.catalog});
@@ -11,21 +12,16 @@ class HomeDetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: context.theme.canvasColor,
       ),
-      backgroundColor: Mytheme.creamecolor,
+      backgroundColor: context.theme.canvasColor,
       bottomNavigationBar: ButtonBar(
         alignment: MainAxisAlignment.spaceBetween,
               children: [
                 "\$${catalog.price}".text.bold.color(Colors.red).xl3.make(),
-                ElevatedButton(
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Mytheme.darkbluishColor),
-                    shape: MaterialStateProperty.all(StadiumBorder())
-                  ),
-                  onPressed: (){}, child: Text('Add to Cart')).wh(150, 40)
+                AddToCart(catalog: catalog,)
               ],
-      ).p20().color(Mytheme.creamecolor),
+      ).p20().color(context.theme.cardColor),
       body: Column(
         children: [
           Hero(tag: Key(catalog.id.toString()),
@@ -34,17 +30,18 @@ class HomeDetailsPage extends StatelessWidget {
             Expanded(child: VxArc(height: 20,
             arcType: VxArcType.convey,
             edge: VxEdge.top,
-              child: Container(width: context.screenWidth,
+              child: Container(
+                width: context.screenWidth,
               child: Column(
                 children: [
                   HeightBox(25),
-                  catalog.name.text.xl4.bold.make(),
-                  catalog.desc.text.textStyle(context.captionStyle).xl.make(),
+                  catalog.name.text.xl4.bold.color(context.theme.primaryColor).make(),
+                  catalog.desc.text.color(context.theme.primaryColor).textStyle(context.captionStyle).xl.make(),
                   10.heightBox,
-                  Text("Stet takimata voluptua elitr et tempor eos et, at gubergren invidunt eos et est aliquyam stet clita, et ipsum invidunt.").p12(),
+                  "Stet takimata voluptua elitr et tempor eos et, at gubergren invidunt eos et est aliquyam stet clita, et ipsum invidunt".text.xl.color(context.primaryColor).make().p20()
                 ],
               ),
-                color: Colors.red[100],)).p(8)
+                color:context.theme.cardColor)),
                 )
 
 

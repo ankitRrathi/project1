@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:project1/models/cart.dart';
 import 'package:project1/models/catalog.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:project1/widgets/HomeWidget/catalog_image.dart';
 import 'package:project1/widgets/themes.dart';
 import 'package:project1/pages/home_detail_page.dart';
+import 'package:project1/widgets/HomeWidget/add_to_cart.dart';
 
 class CatalogList extends StatelessWidget {
   const CatalogList({super.key});
@@ -40,26 +42,23 @@ class CatalogItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-             catalog.name.text.xl.color(Mytheme.darkbluishColor).bold.make(),
-             catalog.desc.text.textStyle(context.captionStyle).make(),
+             catalog.name.text.xl.color(context.primaryColor).bold.make(),
+             catalog.desc.text.textStyle(context.captionStyle).color(context.primaryColor).make(),
              ButtonBar(
               alignment: MainAxisAlignment.spaceBetween,
               children: [
                 "\$${catalog.price}".text.bold.xl.make(),
-                ElevatedButton(
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Mytheme.darkbluishColor),
-                    shape: MaterialStateProperty.all(StadiumBorder())
-                  ),
-                  onPressed: (){}, child: Text('Buy'))
+                AddToCart(catalog: catalog,),
+              
               ],
-             )
+             ).px(5)
             ],
           ))
         ]
          
       )
 
-    ).white.roundedLg.square(150).make().py16();
+    ).color(context.cardColor).roundedLg.square(150).make().py16();
   }
 }
+

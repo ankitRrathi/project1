@@ -8,7 +8,7 @@ class CataloImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Image.network(image).box.rounded.p12.color(Mytheme.creamecolor).make().p20().w40(context);
+    return  Image.network(image).box.rounded.p12.color(context.canvasColor).make().p20().w40(context);
         
   }
 }

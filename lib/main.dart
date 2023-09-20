@@ -3,16 +3,18 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:project1/MyRoutes.dart';
+import 'package:project1/core/store.dart';
 import 'package:project1/models/catalog.dart';
 import 'package:project1/pages/cart_page.dart';
 import 'package:project1/pages/homepage.dart';
 //import 'package:project1/widgets/drawer.dart';
 //import 'package:project1/widgets/item_widget.dart';
 import 'package:project1/widgets/themes.dart';
-//import 'package:velocity_x/velocity_x.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp( VxState(store: MyStore(catalog: CatalogModel()),
+    child: MyApp()));
 }
 
 class MyApp extends StatefulWidget {
