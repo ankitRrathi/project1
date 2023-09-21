@@ -21,19 +21,20 @@ class _AddToCartState extends State<AddToCart> {
   @override
   Widget build(BuildContext context) {
     VxState.watch(context, on: [AddMutation, RemoveMutation]);
-    final CartModel _cart = (VxState.store as MyStore).cart;
-    bool isInCart = _cart.items.contains(widget.catalog) ?? false;
+    final CartModel cart = (VxState.store as MyStore).cart;
+    bool isInCart = cart.items.contains(widget.catalog);
 
     return ElevatedButton(
         style: ButtonStyle(
             backgroundColor:
                 MaterialStateProperty.all(Mytheme.lightbluishColor),
-            shape: MaterialStateProperty.all(StadiumBorder())),
+            shape: MaterialStateProperty.all(const StadiumBorder())),
         onPressed: () {
           if (!isInCart) {
             AddMutation(widget.catalog);
           }
         },
-        child: isInCart ? Icon(Icons.done) : Text('Add to Cart').p(5));
+        child:
+            isInCart ? const Icon(Icons.done) : const Text('Add to Cart').p(5));
   }
 }

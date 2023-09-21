@@ -1,15 +1,12 @@
-// ignore_for_file: empty_constructor_bodies
+// ignore_for_file: empty_constructor_bodies, unnecessary_getters_setters
 
 import 'package:project1/core/store.dart';
 import 'package:project1/models/catalog.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class CartModel {
-  
   late CatalogModel _catalog;
   final List<int> _itemIds = [];
-
-
 
   CatalogModel get catalog => _catalog;
 
@@ -19,30 +16,28 @@ class CartModel {
 
   List<Item> get items => _itemIds.map((id) => _catalog.getById(id)).toList();
 
-  num get totalPrice => items.fold(0, (total, current) => total + current.price);
-
-  
+  num get totalPrice =>
+      items.fold(0, (total, current) => total + current.price);
 }
 
 class AddMutation extends VxMutation<MyStore> {
-  final Item item;// Change the parameter name to be more descriptive
+  final Item item; // Change the parameter name to be more descriptive
 
   AddMutation(this.item);
 
   @override
   perform() {
-   store?.cart._itemIds.add(item.id);
+    store?.cart._itemIds.add(item.id);
+  }
 }
-}
-
 
 class RemoveMutation extends VxMutation<MyStore> {
-  final Item item;// Change the parameter name to be more descriptive
+  final Item item; // Change the parameter name to be more descriptive
 
   RemoveMutation(this.item);
 
   @override
   perform() {
-   store?.cart._itemIds.remove(item.id);
-}
+    store?.cart._itemIds.remove(item.id);
+  }
 }

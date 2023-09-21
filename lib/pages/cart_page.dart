@@ -9,7 +9,6 @@ class CartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var catalog;
     return Scaffold(
       backgroundColor: context.theme.canvasColor,
       appBar: AppBar(
@@ -18,35 +17,38 @@ class CartPage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Column(children: [
-        _CartList().p16().expand(),
-        Divider(),
-        _CartTotal(),
+        const _CartList().p16().expand(),
+        const Divider(),
+        const _CartTotal(),
       ]),
     );
   }
 }
 
 class _CartTotal extends StatelessWidget {
-  const _CartTotal({super.key});
+  const _CartTotal();
 
   @override
   Widget build(BuildContext context) {
-    final CartModel _cart = (VxState.store as MyStore).cart;
+    final CartModel cart = (VxState.store as MyStore).cart;
     return SizedBox(
       height: 150,
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
-       VxConsumer(builder:((context, store, status) {
-        return
-         "\$${_cart.totalPrice}".text.color(context.primaryColor).xl4.make();
-       }
-       )
-       , mutations:{RemoveMutation}),
+        VxConsumer(
+            builder: ((context, store, status) {
+              return "\$${cart.totalPrice}"
+                  .text
+                  .color(context.primaryColor)
+                  .xl4
+                  .make();
+            }),
+            mutations: const {RemoveMutation}),
         30.widthBox,
         ElevatedButton(
                 style: ButtonStyle(
                     backgroundColor:
                         MaterialStateProperty.all(Mytheme.lightbluishColor),
-                    shape: MaterialStateProperty.all(StadiumBorder())),
+                    shape: MaterialStateProperty.all(const StadiumBorder())),
                 onPressed: () {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
@@ -56,7 +58,7 @@ class _CartTotal extends StatelessWidget {
                     ),
                   );
                 },
-                child: Text('Buy'))
+                child: const Text('Buy'))
             .p1()
             .w32(context)
       ]),
@@ -65,7 +67,7 @@ class _CartTotal extends StatelessWidget {
 }
 
 class _CartList extends StatefulWidget {
-  const _CartList({super.key});
+  const _CartList();
 
   @override
   State<_CartList> createState() => _CartListState();
@@ -75,19 +77,19 @@ class _CartListState extends State<_CartList> {
   @override
   Widget build(BuildContext context) {
     VxState.watch(context, on: [RemoveMutation]);
-    final CartModel _cart = (VxState.store as MyStore).cart;
-    return _cart.items!.isEmpty
+    final CartModel cart = (VxState.store as MyStore).cart;
+    return cart.items.isEmpty
         ? "Nothing to Show in you cart".text.xl.makeCentered()
         : ListView.builder(
-            itemCount: _cart?.items.length,
+            itemCount: cart.items.length,
             itemBuilder: (context, index) => ListTile(
-                leading: Icon(Icons.done),
-                title: _cart.items[index].name.text
+                leading: const Icon(Icons.done),
+                title: cart.items[index].name.text
                     .color(context.primaryColor)
                     .make(),
                 trailing: IconButton(
-                  onPressed: () => RemoveMutation(_cart.items[index]),
-                  icon: Icon(Icons.remove_circle),
+                  onPressed: () => RemoveMutation(cart.items[index]),
+                  icon: const Icon(Icons.remove_circle),
                 )));
   }
 }
