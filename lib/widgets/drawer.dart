@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:project1/MyRoutes.dart';
+import 'package:project1/pages/categories.dart';
 import 'package:project1/pages/profile.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:project1/pages/support.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
@@ -11,28 +16,51 @@ class MyDrawer extends StatelessWidget {
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
-          const DrawerHeader(
+           DrawerHeader(
               margin: EdgeInsets.zero,
               padding: EdgeInsets.zero,
-              decoration: BoxDecoration(color: Colors.deepPurple),
+              decoration:  BoxDecoration(color: context.canvasColor),
               child: UserAccountsDrawerHeader(
-                accountName: Text('AnkitR Rathi'),
-                accountEmail: Text('ar487084@gmail.com'),
-                decoration: BoxDecoration(color: Colors.deepPurple),
-                currentAccountPicture: CircleAvatar(
-                    backgroundImage: AssetImage('assets/images/a.jpg')),
+                accountName: Text('AnkitR Rathi',style: TextStyle(color: context.primaryColor),),
+                accountEmail: Text('ar487084@gmail.com',style: TextStyle(color: context.primaryColor),),
+                decoration:  BoxDecoration(color: context.canvasColor),
+                currentAccountPicture:Container(
+                  height: 80,
+                  width: 80, 
+                  decoration:const BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        Colors.green,Colors.red,Colors.yellow,Colors.purple
+                      ],
+                      ),shape: BoxShape.circle,
+                  
+                  ),
+                  child:  Padding(
+                    padding: const  EdgeInsets.all(3.0),
+                    child:   Container(
+                      decoration:const  BoxDecoration(
+                        color: Colors.white,shape: BoxShape.circle
+                      ),
+                      child: const CircleAvatar(backgroundColor: Colors.white,radius: 50,
+                          backgroundImage: AssetImage('assets/images/d.jpg')),
+                    ),
+                  ),
+                ),
               )),
-          const InkWell(
+           InkWell(onTap: (){
+            Navigator.pushNamed(context, MyRoutes.homeRoute);
+           },
             child: ListTile(
-              trailing: Icon(CupertinoIcons.arrow_up_right),
+              trailing:const  Icon(CupertinoIcons.arrow_up_right),
               leading: Icon(
                 CupertinoIcons.home,
-                color: Colors.black,
+                color: context.primaryColor,
+                
               ),
               title: Text(
                 'Home',
                 textAlign: TextAlign.start,
-                style: TextStyle(fontSize: 15, fontFamily: 'ankit'),
+                style: TextStyle(fontSize: 15, fontFamily:GoogleFonts.poppins().fontFamily,color: context.primaryColor),
               ),
             ),
           ),
@@ -40,13 +68,16 @@ class MyDrawer extends StatelessWidget {
             color: Colors.grey,
             thickness: 2,
           ),
-          const InkWell(
+           InkWell(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: ((context) =>const  Categories())));
+            },
             child: ListTile(
-              trailing: Icon(CupertinoIcons.arrow_up_right),
-              leading: Icon(Icons.category_sharp, color: Colors.black),
+              trailing:const  Icon(CupertinoIcons.arrow_up_right),
+              leading: Icon(Icons.category_sharp,color: context.primaryColor),
               title: Text(
                 'Categories',
-                style: TextStyle(fontFamily: 'ankit', fontSize: 15),
+                style: TextStyle(fontFamily: GoogleFonts.poppins().fontFamily, fontSize: 15,color: context.primaryColor),
               ),
             ),
           ),
@@ -54,15 +85,18 @@ class MyDrawer extends StatelessWidget {
             color: Colors.grey,
             thickness: 2,
           ),
-          const InkWell(
+           InkWell(
+            onTap: (){
+              Navigator.push(context,MaterialPageRoute(builder: (context)=>const Support()));
+            },
             child: ListTile(
-              trailing: Icon(CupertinoIcons.arrow_up_right),
+              trailing:const  Icon(CupertinoIcons.arrow_up_right),
               leading: Icon(
                 Icons.support_agent_outlined,
-                color: Colors.black,
+                color: context.primaryColor,
               ),
               title: Text('Support',
-                  style: TextStyle(fontFamily: 'ankit', fontSize: 15)),
+                  style: TextStyle(fontFamily: GoogleFonts.poppins().fontFamily, fontSize: 15,color: context.primaryColor)),
             ),
           ),
           const Divider(
@@ -71,16 +105,15 @@ class MyDrawer extends StatelessWidget {
           ),
           InkWell(
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const Settings()));
+              Navigator.push(context,MaterialPageRoute(builder: (context)=>const Settings()));
             },
-            child: const ListTile(
-              trailing: Icon(
+            child:  ListTile(
+              trailing:const  Icon(
                   CupertinoIcons.arrow_up_right), // Use a constant icon here
               leading: Icon(CupertinoIcons.person_crop_circle_fill_badge_exclam,
-                  color: Colors.black),
+                  color: context.primaryColor),
               title: Text('Profile',
-                  style: TextStyle(fontFamily: 'ankit', fontSize: 15)),
+                  style: TextStyle(fontFamily:GoogleFonts.poppins().fontFamily, fontSize: 15,color: context.primaryColor)),
             ),
           ),
           const Divider(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project1/models/catalog.dart';
 import 'package:project1/widgets/rounded_btn.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ItemWidget extends StatelessWidget {
   final Item item;
@@ -23,8 +24,8 @@ class ItemWidget extends StatelessWidget {
             leading: Image.network(item.image),
             title: Text(
               item.name,
-              style: const TextStyle(
-                  fontFamily: 'ankit', fontWeight: FontWeight.bold),
+              style:  TextStyle(
+                  fontFamily:GoogleFonts.poppins().fontFamily, fontWeight: FontWeight.bold),
             ),
             subtitle: Text(item.desc),
             trailing: Text(

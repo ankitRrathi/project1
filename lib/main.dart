@@ -1,9 +1,14 @@
+
 import 'package:flutter/material.dart';
 import 'package:project1/MyRoutes.dart';
 import 'package:project1/core/store.dart';
 import 'package:project1/models/catalog.dart';
 import 'package:project1/pages/cart_page.dart';
+import 'package:project1/pages/categories.dart';
 import 'package:project1/pages/homepage.dart';
+import 'package:project1/pages/login.dart';
+import 'package:project1/pages/profile.dart';
+import 'package:project1/pages/support.dart';
 
 import 'package:project1/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -24,16 +29,19 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.light,
       theme: Mytheme.lightTheme(context),
       darkTheme: Mytheme.darkTheme(context),
       debugShowCheckedModeBanner: false,
-      initialRoute: MyRoutes.homeRoute,
+      initialRoute: MyRoutes.login,
       routes: {
         "/": (context) => const Homepage(),
         MyRoutes.homeRoute: (context) => const Homepage(),
-        MyRoutes.cartpage: (context) => const CartPage()
-        // MyRoutes.loginRoute: (context) => Loginpage(),
+        MyRoutes.cartpage: (context) => const CartPage(),
+        MyRoutes.profile : (context) => const Settings(),
+        MyRoutes.category: (context)=>  const Categories(),
+        MyRoutes.support:(context)=> const Support(),
+        MyRoutes.login : (context)=>const Login()
       },
     );
   }

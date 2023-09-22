@@ -67,6 +67,7 @@ flutter:
   assets:
     - assets/images/abc.png
     - assets/images/a.jpg
+    - assets/images/d.jpg
     - assets/files/catalog.json
     - assets/files/products.json
      

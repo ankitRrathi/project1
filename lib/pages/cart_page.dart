@@ -3,6 +3,7 @@ import 'package:project1/core/store.dart';
 import 'package:project1/models/cart.dart';
 import 'package:project1/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
@@ -13,7 +14,7 @@ class CartPage extends StatelessWidget {
       backgroundColor: context.theme.canvasColor,
       appBar: AppBar(
         backgroundColor: context.theme.canvasColor,
-        title: "Cart".text.xl4.color(context.primaryColor).make(),
+        title: "Cart".text.textStyle(TextStyle(fontFamily: GoogleFonts.poppins().fontFamily)).xl4.color(context.primaryColor).make(),
         centerTitle: true,
       ),
       body: Column(children: [
@@ -79,7 +80,7 @@ class _CartListState extends State<_CartList> {
     VxState.watch(context, on: [RemoveMutation]);
     final CartModel cart = (VxState.store as MyStore).cart;
     return cart.items.isEmpty
-        ? "Nothing to Show in you cart".text.xl.makeCentered()
+        ? "Nothing to Show in you cart".text.color(context.primaryColor).xl.makeCentered()
         : ListView.builder(
             itemCount: cart.items.length,
             itemBuilder: (context, index) => ListTile(

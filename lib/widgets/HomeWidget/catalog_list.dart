@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:project1/models/catalog.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:project1/widgets/HomeWidget/catalog_image.dart';
@@ -41,7 +42,14 @@ class CatalogItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          catalog.name.text.xl.color(context.primaryColor).bold.make(),
+          catalog.name.text.xl
+              .textStyle(
+                  TextStyle(fontFamily: GoogleFonts.poppins().fontFamily))
+              .color(
+                context.primaryColor,
+              )
+              .bold
+              .make(),
           catalog.desc.text
               .textStyle(context.captionStyle)
               .color(context.primaryColor)
@@ -49,7 +57,12 @@ class CatalogItem extends StatelessWidget {
           ButtonBar(
             alignment: MainAxisAlignment.spaceBetween,
             children: [
-              "\$${catalog.price}".text.bold.xl.make(),
+              "\$${catalog.price}"
+                  .text
+                  .color(context.primaryColor)
+                  .bold
+                  .xl
+                  .make(),
               AddToCart(
                 catalog: catalog,
               ),

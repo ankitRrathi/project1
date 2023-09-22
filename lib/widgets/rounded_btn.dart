@@ -9,23 +9,29 @@ class Products extends StatefulWidget {
 }
 
 class _ProductsState extends State<Products> {
+  
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: const Text(
-          "Catalog",
-          style:
-              TextStyle(fontSize: 21, fontFamily: 'ankit', color: Colors.black),
-        ),
-        iconTheme: const IconThemeData(color: Colors.black),
-        centerTitle: true,
-        actions: const [Icon(CupertinoIcons.profile_circled)],
+        
+       title: const Text("Catalog",style: TextStyle(fontSize: 21,fontFamily: 'ankit',color: Colors.black),),
+       iconTheme:const IconThemeData(
+        color: Colors.black
+       ),
+       centerTitle: true,
+       actions: const [
+        Icon(CupertinoIcons.profile_circled)
+      
+       ],
       ),
       body: const Column(
         children: [],
       ),
+      
     );
   }
 }
+

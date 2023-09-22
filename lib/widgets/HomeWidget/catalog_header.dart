@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CatalogHeader extends StatelessWidget {
   const CatalogHeader({super.key});
@@ -9,8 +10,8 @@ class CatalogHeader extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        "Calatog App".text.xl5.bold.color(context.theme.primaryColor).make(),
-        "trending products".text.xl2.color(context.theme.primaryColor).make()
+        "Calatog App".text.textStyle(TextStyle(fontFamily: GoogleFonts.poppins().fontFamily)).xl5.bold.color(context.theme.primaryColor).make(),
+        "trending products".text.textStyle(TextStyle(fontFamily: GoogleFonts.poppins().fontFamily)).xl2.color(context.theme.primaryColor).make()
       ],
     );
   }
