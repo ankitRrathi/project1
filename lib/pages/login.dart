@@ -24,9 +24,10 @@ class Login extends StatelessWidget {
             Form(
               key: formkey1, 
               child: TextFormField(
+                style: TextStyle(color: context.primaryColor,fontFamily: GoogleFonts.poppins().fontFamily),
                 
                 validator: ( String? value) {
-                  if(value==null || value.isEmpty)
+                  if(value==null || value.isEmpty || !value.contains('@'))
                   {
                     return ('Please Enter valid username ');
                   }
@@ -35,7 +36,7 @@ class Login extends StatelessWidget {
                 decoration: InputDecoration(
                   prefixIcon:const  Icon(Icons.email),
                   prefixIconColor: context.primaryColor,
-                  label: "Login".text.make(),
+                  label: "Login".text.textStyle(TextStyle(fontFamily: GoogleFonts.poppins().fontFamily)).color(context.primaryColor).make(),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20),
                      borderSide: BorderSide(
@@ -61,11 +62,16 @@ class Login extends StatelessWidget {
               key: formkey2,
               
               child: TextFormField(
+                style : TextStyle(color :context.primaryColor),
                 validator: (value){
                   if(value==null || value.isEmpty )
                   {
                     return('Password cannot be empty !');
 
+                  }
+                  else if(value.length<6)
+                  {
+                    return('Password Cannot be less Than 6');
                   }
                   return null;
                 },
@@ -74,7 +80,7 @@ class Login extends StatelessWidget {
                 decoration: InputDecoration(
                   prefixIcon:const  Icon(Icons.remove_red_eye_rounded),
                   prefixIconColor: context.primaryColor,
-                  label: "Password".text.make(),
+                  label: "Password".text.textStyle(TextStyle(color: context.primaryColor, fontFamily: GoogleFonts.poppins().fontFamily)).color(context.primaryColor).make(),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20),
                      borderSide: BorderSide(

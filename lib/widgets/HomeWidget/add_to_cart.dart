@@ -35,6 +35,6 @@ class _AddToCartState extends State<AddToCart> {
           }
         },
         child:
-            isInCart ? const Icon(Icons.done) : const Text('Add to Cart').p(5));
+            isInCart ? const  Icon(Icons.done) : const Text('Add to Cart').p(5));
   }
 }

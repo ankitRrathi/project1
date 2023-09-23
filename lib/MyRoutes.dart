@@ -10,4 +10,5 @@ class MyRoutes {
   static String category ="/cateogry";
   static String support = "/support";
   static String login ="/login";
+  static String information ="/information";
 }
