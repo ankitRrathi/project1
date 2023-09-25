@@ -11,4 +11,5 @@ class MyRoutes {
   static String support = "/support";
   static String login ="/login";
   static String information ="/information";
+  static String billing = "/billing";
 }

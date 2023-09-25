@@ -39,3 +39,8 @@ class Mytheme {
   static Color darkbluishColor = const Color(0xff403b58);
   static Color lightbluishColor = Vx.indigo500;
 }
+
+
+
+
+

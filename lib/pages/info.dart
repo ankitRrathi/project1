@@ -12,7 +12,7 @@ class Information extends StatelessWidget {
     return Scaffold(
       backgroundColor: context.canvasColor,
       appBar: AppBar(
-        title: "Information".text.xl2.textStyle(TextStyle(fontFamily: GoogleFonts.poppins().fontFamily)).make(),
+        title: "Information".text.color(context.primaryColor).xl2.textStyle(TextStyle(fontFamily: GoogleFonts.poppins().fontFamily)).make(),
         centerTitle: true,
         backgroundColor: context.canvasColor,
         iconTheme: IconThemeData(

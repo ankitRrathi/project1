@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:project1/pages/biiling.dart';
 import 'package:project1/pages/login.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:project1/widgets/themes.dart';
 import 'package:project1/pages/info.dart';
 import 'package:project1/pages/settings_page.dart';
+
 
 class Settings extends StatelessWidget {
   const Settings({super.key});
@@ -176,7 +178,9 @@ class Settings extends StatelessWidget {
                   color: context.primaryColor),
             ),
             trailing: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                 Navigator.push(context, MaterialPageRoute(builder: ((context) => const Billing())));
+                },
                 icon: const Icon(
                   CupertinoIcons.greaterthan_circle_fill,
                   size: 28,
