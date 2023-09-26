@@ -42,7 +42,8 @@ class _CartTotal extends StatelessWidget {
                   .color(context.primaryColor)
                   .xl4
                   .make();
-            }),
+            }
+            ),
             mutations: const {RemoveMutation}),
         30.widthBox,
         ElevatedButton(
